@@ -1,0 +1,29 @@
+.btn-primary {
+    background-color: #ff597b !important;
+    border: #ff597b !important;
+    color: #ff597a00 !important;
+
+    border: none;
+
+    border-radius: 60px !important;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-primary:hover { 
+    background-color: #000000 !important;
+    color: #ff597b !important;
+
+    border-radius: 60px !important;
+    width: 150px;
+    height: 50px;
+}
+
+#play{
+    margin-left: -13.3%;
+
+    width: 30%;
+    height: 30%;
+
+    z-index: -1;
+}
