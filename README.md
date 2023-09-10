@@ -1,4 +1,4 @@
-# Farm buddies
+# Farm Buddies 🚜🌽
 
 ## Requirements
 - The user enters his/her info and the specifications of the study partner they are looking for.
