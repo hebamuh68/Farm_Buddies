@@ -1,4 +1,4 @@
-# Find-Study-Partner
+# Farm buddies
 
 ## Requirements
 - The user enters his/her info and the specifications of the study partner they are looking for.
