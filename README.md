@@ -9,4 +9,4 @@
 ![System design (2)](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/0a21b10a-93d4-4ff2-9008-85e073b14e20)
 
 ## Database design
-![Database design (1)](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/3ba0cbd1-9149-4cd8-814a-1e78e9ff7a53)
+![Database design (2)](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/fae20a1f-e774-4034-be56-396a206cfe64)
