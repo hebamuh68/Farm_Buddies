@@ -10,3 +10,4 @@
 
 ## Database design
 ![Database design (3)](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/111205de-01df-48da-96a1-5fc5abbbb633)
+![pic](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/a56523e6-7669-4110-9eab-16ff403e716c)
