@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{%load static%}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}">
+    <title>Farm Buddies</title>
+    <!------------------------------------ CSS --------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+        }
+
+        body {
+            background-image: url('{% static "images/pic2.png" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-color: #473C33;
+            color:white
+        }
+
+
+        .center-div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            color: white;
+            text-align: center;
+            line-height: 145.523%;
+            padding-top: 50px;
+            padding-bottom:50px;
+        }
+
+        h1{
+            color: var(--dark-brown, #473C33);
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 145.523%; /* 29.105px */
+        }
+
+        .btn_search{
+        color: var(--white, #FFF);
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 145.523%; /* 29.105px */
+            display: flex;
+            padding: 15px 85px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 25px;
+            background: #128100;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        }
+
+    </style>
+    <!------------------------------------ CSS --------------------------->
+
+</head>
+
+<body style="background-color: #473C33;">
+<div class="title">
+    <h1 style="font-size: 25.543px; font-weight: 700; margin-bottom: 10px;color:white">Farm Buddies 🚜🌽</h1>
+    <h4 style="font-size: 15px; font-weight: 400;">Partner up and sow the seeds of tech success together!</h4>
+</div>
+<div class="center-div ">
+
+    {% block content %}
+    {% if name %}
+
+        {% if gender == "Female" %}
+            <img src='{% static "images/female.png" %}'>
+        {% else %}
+          <img src='{% static "images/male.png" %}'>
+        {% endif %}
+
+        <div>
+            <h1 class="mt-4">
+                {{ name }}
+                <a class="ml-2" href="{{ github_link }}" target="_blank">
+                <img src="{% static 'images/git.png' %}" alt="GitHub Icon">
+            </a>
+            </h1>
+        </div>
+
+        <button class="btn_search mt-4" type="submit">
+            Connect
+            <a href="{{ twitter_link }}" target="_blank">
+                <img src="{% static 'images/twitter.png' %}" alt="Twitter Icon">
+            </a>
+        </button>
+
+    {% else %}
+      <p style="text-align: center;color:#473C33">We're sorry, but we couldn't find a match for you at the moment.
+      <br> Don't worry, though! We'll notify you as soon as we find a
+      <br>suitable match for you.</p>
+        <img style="top:70%;" src="{% static 'images/sheep.png' %}">
+    {% endif %}
+
+    {% endblock %}
+</div>
+
+</body>
+
+</html>
+</body>
+
+</html>
