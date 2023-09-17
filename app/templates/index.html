@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{%load static%}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}">
+    <title>Farm Buddies</title>
+    <!------------------------------------ CSS --------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+        }
+
+        body {
+            background-image: url('{% static "images/pic.png" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-color: #473C33;
+        }
+
+        .form-field {
+            width: 400px;
+            padding-top:15px;
+            padding-bottom:15px;
+            padding-left:10px;
+            border-radius: 10px;
+            background-color: #FFFF;
+          }
+
+        .center-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+        .title {
+            color: white;
+            text-align: center;
+            line-height: 145.523%;
+            padding-top: 50px;
+            padding-bottom:50px;
+        }
+
+        .btn_search {
+            width: 220px;
+            padding: 15px;
+            background: linear-gradient(120deg, #ABC270 6.28%, #FDC668 84.34%);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            color: #473C33;
+        }
+        .btn_search:hover {
+            background: linear-gradient(120deg, #FDC668 6.28%, #ABC270 84.34%);
+        }
+
+    </style>
+    <!------------------------------------ CSS --------------------------->
+
+</head>
+
+<body style="background-color: #473C33;">
+
+<div class="title">
+    <h1 style="font-size: 25.543px; font-weight: 700; margin-bottom: 10px;">Farm Buddies 🚜🌽</h1>
+    <h4 style="font-size: 15px; font-weight: 400;">Partner up and sow the seeds of tech success together!</h4>
+</div>
+
+<div class="center-div">
+
+    {% block content %}
+    <div class="col-md-8 offset-md-2 center-content">
+        <form action="" method="post" enctype="multipart/form-data" class="form">
+            {% csrf_token %}
+
+            <div class="user_info" style="margin-bottom:50px;">
+                <h1 style="color: #FEC868; font-size: 20px;margin-bottom:20px;">Your personal info</h1>
+                <div class="form-group ">
+                    {{ form.name }}
+                    {{ form.age }}
+                </div>
+                <div class="form-group ">
+                    {{ form.gender }}
+                    {{ form.governorate }}
+                </div>
+                <div class="form-group ">
+                    {{ form.cs_field }}
+                    {{ form.experience_levels }}
+                </div>
+                <div class="form-group ">
+                    {{ form.twitter_link }}
+                    {{ form.github_link }}
+                </div>
+            </div>
+
+            <div class="buddy_info">
+                <h1 style="color: #FEC868; font-size: 20px;margin-bottom:20px;">Your farm buddy info</h1>
+                <div class="form-group">
+                    {{ form.buddy_age }}
+                    {{ form.buddy_gender }}
+                </div>
+                <div class="form-group ">
+                    {{ form.buddy_governorate }}
+                    <button class="btn_search" type="submit">Submit
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    {% endblock %}
+</div>
+
+</body>
+
+</html>
+</body>
+
+</html>
