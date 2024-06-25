@@ -9,6 +9,8 @@
 ![System design (2)](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/0a21b10a-93d4-4ff2-9008-85e073b14e20)
 
 ## Database design
+- The users database keepa a list of users information for the purpose of finding their matched ones.
+
 ![Database design (3)](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/111205de-01df-48da-96a1-5fc5abbbb633)
 
 ![image](https://github.com/hebamuh68/Farm-Buddies/assets/69214737/e3e0c500-7233-4dd2-9e1f-843756e46885)

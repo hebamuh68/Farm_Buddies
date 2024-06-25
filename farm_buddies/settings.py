@@ -62,16 +62,15 @@ WSGI_APPLICATION = "farm_buddies.wsgi.application"
 load_dotenv()
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'CLIENT':{
-            'username': os.environ['MONGODB_USERNAME'],
-            'password': os.environ['MONGODB_PASSWORD'],
-            'host': os.environ['MONGODB_ATLAS_URL'],
-        },
-        'NAME': 'farm_buddies',
-        'authSource': 'admin',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': os.getenv('POSTGRES_HOST'),
+        'PORT': os.getenv('POSTGRES_PORT'),
     }
 }
+
 
 
 # Password validation
@@ -93,11 +92,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_TZ = True
 
 
@@ -107,3 +103,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
