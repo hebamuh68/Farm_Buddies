@@ -10,6 +10,7 @@ def userView(request):
         if form.is_valid():
 
             user_age = form.cleaned_data["age"]
+            user_email = form.cleaned_data["email"]
             user_gender = form.cleaned_data["gender"]
             user_governorate = form.cleaned_data["governorate"]
             user_cs_field = form.cleaned_data["cs_field"]

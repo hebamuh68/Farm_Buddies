@@ -1,0 +1,15 @@
+<!-- age_check.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Check</title>
+</head>
+<body>
+    <h1>Age Check Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

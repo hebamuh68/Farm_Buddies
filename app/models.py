@@ -6,6 +6,8 @@ class UserModel(models.Model):
 
     name = models.CharField(max_length=100, blank=False, null=False)
 
+    email = models.EmailField(max_length=320, primary_key=True, unique=True, blank=False, null=False )
+
     age = models.CharField(max_length=100, choices=age_CHOICES, default='18-25', blank=False, null=False)
 
     gender = models.CharField(max_length=100, choices=gender_CHOICES, default='Female', blank=False, null=False)
@@ -21,6 +23,7 @@ class UserModel(models.Model):
     twitter_link = models.URLField(max_length=500, blank=False, null=False)
 
     github_link = models.URLField(max_length=500, blank=False, null=False)
+
 
     # Farm Buddy =================================================================
 
