@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/Farm-Buddies
+    ports:
+      - 8000:8000
+    image: farm_img:v0
+    container_name: Farm_cont
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:16 #this official postgres image name cannot be changed
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=farm_db
+      - POSTGRES_USER=hebamuh68
+      - POSTGRES_PASSWORD=heba333
+    container_name: farm_db_cont
+
